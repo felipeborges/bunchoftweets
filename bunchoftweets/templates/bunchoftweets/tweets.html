@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Bunch of tweets</title>
+    </head>
+<body>
+
+{% for tweet in tweets %}
+    <blockquote class="twitter-tweet" lang="en">
+        <p>{{ tweet.text }}</p>&mdash; {{ tweet.user.screen_name }} <a href="https://twitter.com/{{tweet.user.id }}/status/{{ tweet.id}}">{{ tweet.created_at }}</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% endfor %}
+
+</body>
+</html>
